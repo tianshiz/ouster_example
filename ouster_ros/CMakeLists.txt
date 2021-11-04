@@ -95,3 +95,5 @@ install(
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
 install(FILES ../LICENSE ../LICENSE-bin ouster.launch viz.rviz
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+catkin_install_python(PROGRAMS src/pcap_pub_node.py
+                      DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
