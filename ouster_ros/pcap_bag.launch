@@ -7,10 +7,10 @@
   <param name ="~/meta_path" value="$(arg metadata)"/>
   <param name ="~/pcap_path" value="$(arg pcap_path)"/>
   </node>
-
+<!--
   <node pkg="rosbag" type="record" output="screen" name="rosbag_record_pcap"
        args="record -o /tmp/pcap /os_cloud_node/points /os_cloud_node/imu"/>
-
+-->
 </launch>
 
 
