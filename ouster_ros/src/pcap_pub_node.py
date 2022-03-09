@@ -31,7 +31,7 @@ if __name__ == '__main__':
     for packet in source:
         if isinstance(packet, client.LidarPacket):
             timestamps = packet.timestamp[0]
-
+            column_count = len(packet.timestamp)
         elif isinstance(packet, client.ImuPacket):
             #gyro time in nanoseconds int
             timestamps = packet.gyro_ts
@@ -51,7 +51,6 @@ if __name__ == '__main__':
         else:
             start_time = nano_time()
             start_stamp = timestamps
-            column_count = len(packet.timestamp)
         msg = PacketMsg()
         #convert numpy data to list to fit msg
         msg.buf = packet._data.tolist()
